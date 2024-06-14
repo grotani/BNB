@@ -1,0 +1,45 @@
+@charset "UTF-8";
+
+/* 폰트 */
+@font-face {
+    font-family: 'SDSamliphopangche_Basic';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts-20-12@1.0/SDSamliphopangche_Basic.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+	 font-family: SDSamliphopangche_Basic;
+}
+
+/* rating(별점) css */
+.star-rating {
+	display: flex;
+	flex-direction: row-reverse;
+	font-size: 2.25rem;
+	line-height: 2.5rem;
+	justify-content: space-around;
+	padding: 0 0.2em;
+	text-align: center;
+	width: 5em;
+}
+ 
+.star-rating input {
+	display: none;
+}
+ 
+.star-rating label {
+	-webkit-text-fill-color: transparent; /* Will override color (regardless of order) */
+	-webkit-text-stroke-width: 2.3px;
+	-webkit-text-stroke-color: white;
+	cursor: pointer;
+}
+ 
+.star-rating :checked ~ label {
+	-webkit-text-fill-color: gold;
+}
+ 
+.star-rating label:hover,
+.star-rating label:hover ~ label {
+	-webkit-text-fill-color: #fff58c;
+}
